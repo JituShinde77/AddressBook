@@ -40,11 +40,6 @@ public class Person{
 		//System.out.println(person2);
 		String str = "ABC";
 		System.out.println(str.compareTo("DEF")); //-3 (Integer.valueOf('A') - Integer.valueOf('D'))
-		System.out.println(str.compareTo("ABC")); //0 (equal string)
-		System.out.println(str.compareTo("abc")); //-32 (Integer.valueOf('A') - Integer.valueOf('a'))
-		System.out.println(str.compareTo("AB"));
-		System.out.println(str.compareToIgnoreCase("ABc"));
-		System.out.println(str.compareToIgnoreCase("X"));
 		System.out.println(person.writePerson());
 	}
 }
