@@ -17,11 +17,17 @@ public class Person{
 
 	public void readEntry(){
 		System.out.print(firstName);
-		System.out.print("\t"+lastName);
-		System.out.print("\t"+address);
-		System.out.print("\t"+state);
-		System.out.print("\t"+zipCode);
-		System.out.print("\t"+phoneNumber);
+		System.out.print("\t\t"+lastName);
+		System.out.print("\t\t"+address);
+		System.out.print("\t\t"+state);
+		System.out.print("\t\t"+zipCode);
+		System.out.println("\t\t"+phoneNumber);
+	}
+
+
+	public String writePerson(){
+		String str = firstName+"\t"+lastName+"\t"+address+"\t"+state+"\t"+zipCode+"\t"+phoneNumber;
+		return str;
 	}
 
 
@@ -31,6 +37,14 @@ public class Person{
 		person.readEntry();
 		Person person2 = new Person("Jitu", "Shinde", "Baramati", "Maharastra", 412103L, 9762757483L);
 		person2.readEntry();
-		System.out.println(person2);
+		//System.out.println(person2);
+		String str = "ABC";
+		System.out.println(str.compareTo("DEF")); //-3 (Integer.valueOf('A') - Integer.valueOf('D'))
+		System.out.println(str.compareTo("ABC")); //0 (equal string)
+		System.out.println(str.compareTo("abc")); //-32 (Integer.valueOf('A') - Integer.valueOf('a'))
+		System.out.println(str.compareTo("AB"));
+		System.out.println(str.compareToIgnoreCase("ABc"));
+		System.out.println(str.compareToIgnoreCase("X"));
+		System.out.println(person.writePerson());
 	}
 }
